@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Filmes KS Flix
+{% endblock %}
+
+{% block content %}
+<div class="py-10">
+    <h1>Lista de filmes</h1>
+    {% for filme in lista_filmes %}
+        <hr>
+        <p>-{{ filme }}</p>
+        <p>{{ filme.descricao }}</p>
+        <p>{{ filme.data_criacao }}</p>
+    {% endfor %}  
+</div>
+{% endblock %}
