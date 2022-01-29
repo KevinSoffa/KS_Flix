@@ -35,3 +35,19 @@ class Filme(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+class Episodio(models.Model):
+    filme_ref = models.ForeignKey(
+        'Filme',
+        related_name='episodios',
+        on_delete = models.CASCADE
+    )
+
+    titulo = models.CharField(
+        max_length=100
+    )
+    video = models.URLField()
+
+    def __str__(self):
+        return self.filme_ref.titulo + " | " + self.titulo
