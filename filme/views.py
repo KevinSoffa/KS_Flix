@@ -1,6 +1,11 @@
-from django.views.generic import TemplateView, ListView, DetailView
+from tempfile import template
 from django.shortcuts import render
 from .models import Filme
+from django.views.generic import (
+    TemplateView, 
+    ListView, 
+    DetailView,
+    )
 
 # Create your views here.
 #def homepage(request):
@@ -34,3 +39,15 @@ class Detalhesfilme(DetailView):
         context['filmes_relacionados'] = filme_relacionados
         return context
 
+
+class PesquisaFilme(ListView):
+    template_name = 'pesquisa.html'
+    model = Filme
+
+    def get_queryset(self):
+        pesquisa = self.request.GET.get('query')
+        if pesquisa:
+            object_list = Filme.objects.filter(titulo__icontains=pesquisa)
+            return object_list
+        else:
+            return 'Erro'
