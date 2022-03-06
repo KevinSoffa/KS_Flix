@@ -1,11 +1,12 @@
-from tempfile import template
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
+from tempfile import template
 from .models import Filme
 from django.views.generic import (
     TemplateView, 
     ListView, 
     DetailView,
-    )
+)
 
 # Create your views here.
 #def homepage(request):
@@ -16,12 +17,12 @@ class Homepage(TemplateView):
     template_name= 'homepage.html'
 
 
-class Homefilmes(ListView):
+class Homefilmes(LoginRequiredMixin, ListView):
     template_name = 'homefilmes.html'
     model = Filme
     # objecy_list
 
-class Detalhesfilme(DetailView):
+class Detalhesfilme(LoginRequiredMixin, DetailView):
     template_name = 'detalhesfilme.html'
     model = Filme
 
@@ -30,6 +31,8 @@ class Detalhesfilme(DetailView):
         filme = self.get_object()
         filme.visualizacao += 1
         filme.save()
+        usuario = request.user
+        usuario.filmes_vistos.add(filme)
         return super().get(request, *args, **kwargs) # redireciona para a URL final 
 
 
@@ -40,7 +43,7 @@ class Detalhesfilme(DetailView):
         return context
 
 
-class PesquisaFilme(ListView):
+class PesquisaFilme(LoginRequiredMixin, ListView):
     template_name = 'pesquisa.html'
     model = Filme
 
