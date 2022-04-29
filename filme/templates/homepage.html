@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block titulo %}
 HomePage KS Flix
@@ -22,7 +23,9 @@ HomePage KS Flix
         <div class="w-full flex justify-center">
             <div class="flex justify-center items-center w-11/12 md:w-10/12">
                 <form method="post" class="w-6/12 justify-center">
+                    {% csrf_token %}
                     <div class="flex flex-grow items-stretch">
+                        {{ form|crispy }}
                         <input  placeholder="Digite seu E-mail...">
                             <button class="bg-red-600 font-medium md:font-normal flex justify-center items-center py-2 px-3 md:px-0 rounded-br-sm rounded-tr-sm md:text-2xl " type="submit">
                                 <span>
