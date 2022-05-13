@@ -1,7 +1,5 @@
 from django.contrib.auth.models import AbstractUser
-from distutils.command.upload import upload
 from django.utils import timezone
-from email.policy import default
 from django.db import models
 
 

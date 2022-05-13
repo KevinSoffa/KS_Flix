@@ -1,14 +1,15 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect, reverse
-from .forms import CriarContaForm
+from .forms import CriarContaForm, FormHomePage
 from tempfile import template
-from .models import Filme
+from .models import Filme, Usuario
 
 from django.views.generic import (
     TemplateView, 
     ListView, 
     DetailView,
-    FormView
+    FormView,
+    UpdateView
 )
 
 # Create your views here.
@@ -18,13 +19,21 @@ from django.views.generic import (
 
 class Homepage(FormView):
     template_name= 'homepage.html'
-    form_class = ''
+    form_class = FormHomePage
 
     def get(self, request, *args, **kwargs): # Condiçoes para usuarios logados
         if request.user.is_authenticated:
             return redirect('filme:homefilmes')
         else:
             return super().get(request, *args, **kwargs) # Para a homepage
+
+    def get_success_url(self):
+        email = self.request.POST.get('email')
+        usuario = Usuario.objects.filter(email=email)
+        if usuario:
+            return reverse('filme:login')
+        else:
+            return reverse('filme:criarconta')
 
 
 class Homefilmes(LoginRequiredMixin, ListView):
@@ -66,8 +75,13 @@ class PesquisaFilme(LoginRequiredMixin, ListView):
             return 'Erro'
 
 
-class PaginaPerfil(LoginRequiredMixin, TemplateView):
+class PaginaPerfil(LoginRequiredMixin, UpdateView): #UpdateView vai atualizar as informações
     template_name = 'editarperfil.html'
+    model = Usuario
+    fields = ['first_name', 'last_name', 'email']
+
+    def get_success_url(self):
+        return reverse('filme:homefilmes')
 
 
 class CriarConta(FormView):
