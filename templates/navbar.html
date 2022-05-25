@@ -8,6 +8,12 @@
     </div>
     <div class="w-6/12 flex flex-nowrap justify-end">
         {%  if user.is_authenticated %}
+        <div class="mr-2">
+            <form  method="get" action="{% url 'filme:pesquisafilme' %}">
+                <input type="text" class="py-1 px-2 rounded-md text-black" name="query" placeholder="Pesquisar um curso...">
+                <input type="submit" value="">
+            </form>
+        </div>
         {% else %}
         <div class="mr-2">
             <a href="{% url 'filme:login' %}">
