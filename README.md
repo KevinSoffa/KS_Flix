@@ -4,6 +4,7 @@
 <h2>Projeto simplificado inspirado na Netflix</h2>
 <h2>Django/Python &#x1F40D</h2>
 <br>
+<hr>
 <h3>&#x2705 Funcionalidades</h3>
 <h4>&#x1F535<strong>Tela Home (sem estar logado)</strong></h4>
 <p>
