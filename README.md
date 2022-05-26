@@ -48,8 +48,8 @@ Pesquisando no campo pesquisa, por palavras chaves, resultará no encontro do cu
 </p>
 <hr>
 <h5>
-  &#x1F6A8Projeto tem como definição fins didáticos. Não visando lucros ou difamação de imagens.<br>
-  Toda a plataforma é de modo geral de aprendizado...&#x1F6A8
+  &#x1F6A8Projeto tem como finalidade fins didáticos. Não visando lucros ou difamação de imagens de terceiros.<br>
+  Toda a plataforma é visando a educação...&#x1F6A8
 </h5>
 <hr>
 <h3>Python     - Kevin Soffa 2022 -     Django</h3>
