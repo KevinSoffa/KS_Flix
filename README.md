@@ -1,5 +1,7 @@
 <h1>KS-Flix &#x23EF</h1>
 <h2> Kevin Soffa &#x1F4EF</h2>
+<h2>Link para o site</h2>
+<a href="https://kevinsoffa-flix.herokuapp.com/" target="_blank" rel="external">KS-Flix</a>
 <br>
 <h2>Projeto simplificado inspirado na Netflix</h2>
 <h2>Django/Python &#x1F40D</h2>
