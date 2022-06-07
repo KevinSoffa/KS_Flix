@@ -40,7 +40,7 @@ Pesquisando no campo pesquisa, por palavras chaves, resultará no encontro do cu
   terá diferentes recomendações.
 </p>
 <p>
-    Alguns campos como; Mais populares (mais visualizações, novo, e assistir de novo)
+    Alguns campos como; Mais populares (mais visualizações, novo e assistir de novo)
 </p>
 <p>
     Clicando em algum curso específico, o vídeo trará algumas informações: Descrição, <br>
