@@ -52,4 +52,24 @@ Pesquisando no campo pesquisa, por palavras chaves, resultará no encontro do cu
   Toda a plataforma é visando a educação...&#x1F6A8
 </h5>
 <hr>
+<h1>Tela Home</h1>
+<img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Home.png">
+<hr>
+<h1>Login</h1>
+<img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Login.png">
+<hr>
+<h1>Criar Conta</h1>
+<img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Criar_conta.png">
+<hr>
+<h1>Tela Principal</h1>
+<img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Tela_principal.png">
+<hr>
+<h1>Tela Play</h1>
+<img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Tela_play.png">
+<hr>
+<h1>Relacionados</h1>
+<img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Relacionados.png">
+<hr>
+<h1>Perfil</h1>
+<img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Perfil.png">
 <h3>Python     - Kevin Soffa 2022 -     Django</h3>
