@@ -72,4 +72,6 @@ Pesquisando no campo pesquisa, por palavras chaves, resultará no encontro do cu
 <hr>
 <h1>Perfil</h1>
 <img src="https://github.com/KevinSoffa/imagens/blob/ks_flix/Perfil.png">
-<h3>Python     - Kevin Soffa 2022 -     Django</h3>
+<footer>
+    copyright © 2022 Kevin Soffa. Todos os direitos reservados
+</footer>
